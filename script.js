@@ -21,10 +21,10 @@ async function checkAnswer() {
     const correctHash1 = "f346692204a77ef735940799259ca692ef60d07ff6f56b8132364689b6999b5d";
 
     if (hash === correctHash0) {
-        location.href = "jR9qtwZD.html";
+        location.href = atob("alI5cXR3WkQuaHRtbA==");
     }
     else if(hash === correctHash1){
-        location.href = "jR9qtwZD.html";
+        location.href = atob("bTlNaVB3YVkuaHRtbA==");
     } else {
         document.getElementById("message").textContent = "ちがいます";
     }
