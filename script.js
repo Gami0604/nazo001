@@ -9,7 +9,7 @@ async function sha256(text) {
         .join("");
 }
 
-function checkAnswer() {
+async function checkAnswer() {
     const answer = document
         .getElementById("answer")
         .value
