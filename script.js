@@ -1,14 +1,31 @@
+async function sha256(text) {
+    const buffer = await crypto.subtle.digest(
+        "SHA-256",
+        new TextEncoder().encode(text)
+    );
+
+    return Array.from(new Uint8Array(buffer))
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
+}
+
 function checkAnswer() {
     const answer = document
         .getElementById("answer")
         .value
-        .trim()
-        .toLowerCase();
+        .trim();
 
-    if (answer === "0000") {
+    const hash = await sha256(answer);
+
+    const correctHash0 = "44c875a35e8cb3abd388262d2ab0db64d93b67fd0982aa9dd9ed53320eeeedc2";
+    const correctHash1 = "f346692204a77ef735940799259ca692ef60d07ff6f56b8132364689b6999b5d";
+
+    if (hash === correctHash0) {
+        location.href = "jR9qtwZD.html";
+    }
+    else if(hash === correctHash1){
         location.href = "jR9qtwZD.html";
     } else {
-        document.getElementById("message").textContent =
-            "ちがいます";
+        document.getElementById("message").textContent = "ちがいます";
     }
 }
