@@ -21,11 +21,13 @@ async function checkAnswer() {
     const correctHash1 = "f346692204a77ef735940799259ca692ef60d07ff6f56b8132364689b6999b5d";
 
     if (hash === correctHash0) {
+        document.getElementById("message").textContent = "認証中";
         location.href = atob("alI5cXR3WkQuaHRtbA==");
     }
     else if(hash === correctHash1){
+        document.getElementById("message").textContent = "認証中";
         location.href = atob("bTlNaVB3YVkuaHRtbA==");
     } else {
-        document.getElementById("message").textContent = "ちがいます";
+        document.getElementById("message").textContent = "入力したパスワードが違います";
     }
 }
