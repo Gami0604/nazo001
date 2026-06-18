@@ -2,18 +2,28 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>謎解き</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>パスワード入力</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
 
-<h1>答えを入力してください</h1>
+        <p>
+            ついにここまで来ましたね。<br>
+            この牢獄から出るまでもうすぐです。
+            謎を解いて導き出したパスワードを半角で入力してください。
+        </p>
 
-<input type="text" id="answer">
-<button onclick="checkAnswer()">送信</button>
+        <input type="text" id="answer" placeholder="****">
 
-<p id="message"></p>
+        <button onclick="checkAnswer()">決定</button>
 
-<script src="script.js"></script>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
